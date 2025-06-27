@@ -9,9 +9,14 @@ class User(BaseModel):
     password: str = Field(..., description="Hashed password")
     created_at: Optional[datetime] = Field(default_factory=datetime.utcnow)
 
+    class Config:
+        from_attributes = True  # Updated for Pydantic V2
 
-# ✅ Add this class to fix the "UserOut" import issue
+
 class UserOut(BaseModel):
     name: str
     email: EmailStr
     created_at: Optional[datetime]
+
+    class Config:
+        from_attributes = True  # Updated for Pydantic V2

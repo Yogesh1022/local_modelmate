@@ -1,8 +1,7 @@
-# backend/services/database.py
-
 from dotenv import load_dotenv
 import os
 from motor.motor_asyncio import AsyncIOMotorClient
+
 
 # ✅ Load environment variables
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", ".env"))

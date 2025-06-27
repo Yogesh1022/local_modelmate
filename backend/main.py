@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+import sys
+import os
 from backend.api import auth, diagram, history, chatbot, research
 
 app = FastAPI(
