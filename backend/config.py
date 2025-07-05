@@ -1,6 +1,7 @@
-import logging
+# backend/config.py
 import os
-from typing import Optional
+import logging
+from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field, AnyUrl, validator
 from dotenv import load_dotenv
@@ -18,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 # Load environment variables
 try:
-    load_dotenv(override=True)  # Load .env file with override for precedence
+    load_dotenv(override=True)
     logger.info("Environment variables loaded successfully")
 except Exception as e:
     logger.error(f"Failed to load .env file: {str(e)}")
@@ -34,7 +35,7 @@ class Settings(BaseSettings):
         default="modelmate",
         description="MongoDB database name"
     )
-    USERS_COLLECTION: str = Field(  # New field
+    USERS_COLLECTION: str = Field(
         default="users",
         description="MongoDB collection name for users"
     )
@@ -42,17 +43,17 @@ class Settings(BaseSettings):
     # JWT settings
     JWT_SECRET: str = Field(
         default="supersecretkey",
-        min_length=32,  # Enforce minimum length for security
+        min_length=32,
         description="JWT secret key for token signing"
     )
     JWT_EXPIRY: int = Field(
-        default=3600,  # 1 hour
-        ge=60,  # Minimum 60 seconds
+        default=3600,
+        ge=60,
         description="JWT token expiry time in seconds"
     )
 
     # Together.AI
-    TOGETHER_API_KEY: Optional[str] = Field(
+    TOGETHER_API_KEY: str = Field(
         default="",
         description="Together.AI API key"
     )
@@ -61,6 +62,20 @@ class Settings(BaseSettings):
     PLANTUML_JAR_PATH: str = Field(
         default="backend/utils/plantuml.jar",
         description="Path to PlantUML JAR file"
+    )
+
+    # Dataset path for research
+    DATASET_PATH: str = Field(
+        default=str(Path(__file__).resolve().parent.parent / "data" / "project_dataset" / "academic_projects.json"),
+        description="Path to dataset file for research"
+    )
+
+    # Research settings
+    RESEARCH_MAX_RESULTS: int = Field(
+        default=10,
+        ge=1,
+        le=20,
+        description="Maximum number of research results to return"
     )
 
     # Validate MongoDB URI format
@@ -88,11 +103,10 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
-        case_sensitive=False,  # Allow case-insensitive env variables
-        extra="ignore"  # Ignore unknown env variables
+        case_sensitive=False,
+        extra="ignore"
     )
 
-# Create global settings object
 try:
     settings = Settings()
     logger.info("Settings initialized successfully")
