@@ -10,4 +10,4 @@ aiofiles
 email-validator
 pymongo
 python-jose[cryptography]
-**requests**
+
