@@ -10,4 +10,7 @@ aiofiles
 email-validator
 pymongo
 python-jose[cryptography]
-**requests**
+python-multipart
+pydantic-settings
+requests
+together

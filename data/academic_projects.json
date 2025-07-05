@@ -1,0 +1,4914 @@
+[
+    {
+        "user_prompt": "I want a plan for a online auction platform",
+        "project_name": "Online Auction Platform",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create architectural, logical, and physical designs"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the software according to the design specifications"
+            },
+            {
+                "stage": "Testing",
+                "description": "Verify the software meets the requirements and works as expected"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Release the software to production and make it available to users"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and fix issues with the software after release"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User registration",
+            "Item listing",
+            "Bidding",
+            "Payment processing"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "id",
+                        "username",
+                        "password"
+                    ],
+                    "methods": [
+                        "register",
+                        "login"
+                    ]
+                },
+                {
+                    "name": "Item",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "description",
+                        "price"
+                    ],
+                    "methods": [
+                        "list",
+                        "bid"
+                    ]
+                },
+                {
+                    "name": "Auction",
+                    "attributes": [
+                        "id",
+                        "item",
+                        "start_time",
+                        "end_time"
+                    ],
+                    "methods": [
+                        "start",
+                        "end"
+                    ]
+                }
+            ],
+            "relationships": [
+                "User -> Item",
+                "Item -> Auction",
+                "Auction -> User"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "from": "User",
+                    "to": "System",
+                    "message": "Register"
+                },
+                {
+                    "from": "System",
+                    "to": "User",
+                    "message": "Registration successful"
+                },
+                {
+                    "from": "User",
+                    "to": "System",
+                    "message": "List item"
+                },
+                {
+                    "from": "System",
+                    "to": "User",
+                    "message": "Item listed successfully"
+                }
+            ],
+            "lifelines": [
+                "User",
+                "System"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "List item",
+                "Bid",
+                "Payment processing"
+            ],
+            "system_boundary": {
+                "system_name": "Online Auction Platform",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "List item",
+                    "Bid",
+                    "Payment processing"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and login process",
+            "steps": [
+                "Start",
+                "User clicks register",
+                "Enter registration details",
+                "Submit registration",
+                "Verify registration",
+                "Login",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user already registered?",
+                    "yes": "Login",
+                    "no": "Enter registration details"
+                },
+                {
+                    "condition": "Is registration successful?",
+                    "yes": "Verify registration",
+                    "no": "Show error message"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a remote work collaboration tool",
+        "project_name": "Remote Work Collaboration Platform",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create architectural and detailed designs"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the platform"
+            },
+            {
+                "stage": "Testing",
+                "description": "Conduct unit, integration, and system testing"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the platform to production"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and fix issues"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User logs in",
+            "User creates a new project",
+            "User invites team members"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "login",
+                        "logout"
+                    ]
+                },
+                {
+                    "name": "Project",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "description"
+                    ],
+                    "methods": [
+                        "create",
+                        "update",
+                        "delete"
+                    ]
+                }
+            ],
+            "relationships": [
+                "A user can have many projects",
+                "A project can have many users"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "from": "User",
+                    "to": "System",
+                    "message": "Login request"
+                },
+                {
+                    "from": "System",
+                    "to": "User",
+                    "message": "Login response"
+                }
+            ],
+            "lifelines": [
+                "User",
+                "System"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Login",
+                "Register",
+                "Create Project",
+                "Invite Team Members"
+            ],
+            "system_boundary": {
+                "system_name": "Remote Work Collaboration Platform",
+                "enclosed_use_cases": [
+                    "Login",
+                    "Register",
+                    "Create Project",
+                    "Invite Team Members"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration process",
+            "steps": [
+                "Start",
+                "User fills registration form",
+                "Check availability of username",
+                "Create user account",
+                "Send confirmation email",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is username available?",
+                    "yes": "Create user account",
+                    "no": "Display error message"
+                },
+                {
+                    "condition": "Is email valid?",
+                    "yes": "Send confirmation email",
+                    "no": "Display error message"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a mental health chatbot",
+        "project_name": "Mental Health Chatbot Project",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and timelines"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements for the chatbot"
+            },
+            {
+                "stage": "Design",
+                "description": "Design the chatbot's architecture and user interface"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the chatbot using a suitable tech stack"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test the chatbot for functionality, usability, and security"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the chatbot on a suitable platform"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Maintain and update the chatbot regularly"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 3,
+                "Implementation": 12,
+                "Testing": 4,
+                "Deployment": 2,
+                "Maintenance": 6
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 1500,
+                "Implementation": 6000,
+                "Testing": 2000,
+                "Deployment": 1000,
+                "Maintenance": 3000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 1,
+                "Implementation": 3,
+                "Testing": 2,
+                "Deployment": 1,
+                "Maintenance": 1
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User interacts with the chatbot for mental health support",
+            "User reports a technical issue with the chatbot",
+            "Admin monitors chatbot performance and user engagement"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "login",
+                        "logout"
+                    ]
+                },
+                {
+                    "name": "Chatbot",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "conversations"
+                    ],
+                    "methods": [
+                        "respond",
+                        "learn"
+                    ]
+                },
+                {
+                    "name": "Conversation",
+                    "attributes": [
+                        "id",
+                        "user_id",
+                        "chatbot_id",
+                        "messages"
+                    ],
+                    "methods": [
+                        "start",
+                        "end"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "type": "one-to-many",
+                    "class1": "User",
+                    "class2": "Conversation"
+                },
+                {
+                    "type": "one-to-many",
+                    "class1": "Chatbot",
+                    "class2": "Conversation"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "Chatbot"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "Hello"
+                },
+                {
+                    "actor": "Chatbot",
+                    "message": "Hi, how can I help you?"
+                },
+                {
+                    "actor": "User",
+                    "message": "I'm feeling sad"
+                },
+                {
+                    "actor": "Chatbot",
+                    "message": "I'm here to listen. Would you like to talk about it?"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "start": "Hello",
+                    "end": "I'm feeling sad"
+                },
+                {
+                    "actor": "Chatbot",
+                    "start": "Hi, how can I help you?",
+                    "end": "I'm here to listen. Would you like to talk about it?"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Interact with Chatbot",
+                "Monitor Performance"
+            ],
+            "system_boundary": {
+                "system_name": "Mental Health Chatbot System",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Interact with Chatbot",
+                    "Monitor Performance"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User interaction process with the chatbot",
+            "steps": [
+                "Start",
+                "User searches for help",
+                "Check if user is registered",
+                "If registered, proceed to chat",
+                "If not, redirect to registration",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user registered?",
+                    "yes": "Proceed to chat",
+                    "no": "Redirect to registration"
+                },
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Proceed",
+                    "no": "Redirect to login"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a smart home automation system",
+        "project_name": "Smart Home Automation System",
+        "sdlc_stages": [
+            "Planning: Define project scope, goals, and deliverables for the smart home automation system",
+            "Requirements Analysis: Gather and analyze requirements from stakeholders and users for the smart home automation system",
+            "Design: Create detailed design documents and prototypes for the smart home automation system",
+            "Implementation: Develop and implement the smart home automation system",
+            "Testing: Conduct unit testing, integration testing, and system testing for the smart home automation system",
+            "Deployment: Deploy the smart home automation system to the production environment",
+            "Maintenance: Perform maintenance tasks, updates, and bug fixes for the smart home automation system"
+        ],
+        "estimations": {
+            "time": {
+                "Planning": "2 weeks",
+                "Requirements Analysis": "4 weeks",
+                "Design": "6 weeks",
+                "Implementation": "16 weeks",
+                "Testing": "8 weeks",
+                "Deployment": "2 weeks",
+                "Maintenance": "Ongoing"
+            },
+            "cost": {
+                "Planning": "10000",
+                "Requirements Analysis": "20000",
+                "Design": "30000",
+                "Implementation": "80000",
+                "Testing": "40000",
+                "Deployment": "10000",
+                "Maintenance": "20000"
+            },
+            "resource": {
+                "Planning": "2",
+                "Requirements Analysis": "3",
+                "Design": "4",
+                "Implementation": "8",
+                "Testing": "4",
+                "Deployment": "2",
+                "Maintenance": "1"
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User controls lighting system",
+            "User controls temperature system",
+            "User receives notifications for security breaches"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "username",
+                        "password"
+                    ],
+                    "methods": [
+                        "login",
+                        "logout"
+                    ]
+                },
+                {
+                    "name": "Device",
+                    "attributes": [
+                        "device_id",
+                        "device_type"
+                    ],
+                    "methods": [
+                        "turn_on",
+                        "turn_off"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "type": "association",
+                    "class1": "User",
+                    "class2": "Device"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "login"
+                },
+                {
+                    "actor": "System",
+                    "message": "authenticate"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "actions": [
+                        "login",
+                        "control devices"
+                    ]
+                },
+                {
+                    "actor": "System",
+                    "actions": [
+                        "authenticate",
+                        "control devices"
+                    ]
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Control Lighting",
+                "Control Temperature",
+                "Receive Notifications"
+            ],
+            "system_boundary": {
+                "system_name": "Smart Home Automation System",
+                "enclosed_use_cases": [
+                    "Control Lighting",
+                    "Control Temperature",
+                    "Receive Notifications"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User authentication and device control process",
+            "steps": [
+                "Start",
+                "User login",
+                "Check authentication",
+                "Control devices",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Control devices",
+                    "no": "Redirect to login"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a event booking platform",
+        "project_name": "Event Booking Platform",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create detailed design documents and prototypes"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the event booking platform"
+            },
+            {
+                "stage": "Testing",
+                "description": "Conduct unit testing, integration testing, and user acceptance testing"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the platform to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and fix issues with the platform"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": "2 weeks",
+                "Requirements Analysis": "4 weeks",
+                "Design": "6 weeks",
+                "Implementation": "16 weeks",
+                "Testing": "8 weeks",
+                "Deployment": "2 weeks",
+                "Maintenance": "Ongoing"
+            },
+            "cost": {
+                "Planning": "1000",
+                "Requirements Analysis": "2000",
+                "Design": "3000",
+                "Implementation": "16000",
+                "Testing": "4000",
+                "Deployment": "1000",
+                "Maintenance": "2000"
+            },
+            "resource": {
+                "Planning": "1 project manager",
+                "Requirements Analysis": "1 business analyst",
+                "Design": "1 UX designer, 1 UI designer",
+                "Implementation": "4 developers",
+                "Testing": "2 testers",
+                "Deployment": "1 devops engineer",
+                "Maintenance": "1 developer, 1 tester"
+            }
+        },
+        "example_charts": [
+            {
+                "chart": "Gantt chart",
+                "description": "Project schedule and timeline"
+            },
+            {
+                "chart": "ER diagram",
+                "description": "Database schema and relationships"
+            },
+            {
+                "chart": "Flowchart",
+                "description": "User registration and event booking process"
+            }
+        ],
+        "scenarios": [
+            {
+                "scenario": "User registers for an account",
+                "description": "User provides personal and contact information"
+            },
+            {
+                "scenario": "User searches for events",
+                "description": "User enters event name, date, and location"
+            },
+            {
+                "scenario": "User books an event",
+                "description": "User selects event, enters payment information, and confirms booking"
+            }
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "class": "User",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "register",
+                        "login"
+                    ]
+                },
+                {
+                    "class": "Event",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "date",
+                        "location"
+                    ],
+                    "methods": [
+                        "search",
+                        "book"
+                    ]
+                },
+                {
+                    "class": "Booking",
+                    "attributes": [
+                        "id",
+                        "user_id",
+                        "event_id",
+                        "payment_info"
+                    ],
+                    "methods": [
+                        "create",
+                        "cancel"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "class1": "User",
+                    "class2": "Booking",
+                    "relationship": "one-to-many"
+                },
+                {
+                    "class1": "Event",
+                    "class2": "Booking",
+                    "relationship": "one-to-many"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "Search events"
+                },
+                {
+                    "actor": "System",
+                    "message": "Return event list"
+                },
+                {
+                    "actor": "User",
+                    "message": "Book event"
+                },
+                {
+                    "actor": "System",
+                    "message": "Confirm booking"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "lifetime": "User searches and books an event"
+                },
+                {
+                    "actor": "System",
+                    "lifetime": "System processes user requests and returns responses"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Search events",
+                "Book event",
+                "Manage events"
+            ],
+            "system_boundary": {
+                "system_name": "Event Booking Platform",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Search events",
+                    "Book event",
+                    "Manage events"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and event booking process",
+            "steps": [
+                "Start",
+                "User searches events",
+                "User selects event",
+                "User enters payment information",
+                "System checks payment information",
+                "System confirms booking",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user registered?",
+                    "yes": "Proceed to event search",
+                    "no": "Redirect to registration"
+                },
+                {
+                    "condition": "Is event available?",
+                    "yes": "Proceed to payment",
+                    "no": "Notify user of unavailability"
+                },
+                {
+                    "condition": "Is payment information valid?",
+                    "yes": "Confirm booking",
+                    "no": "Request payment information again"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a personal finance tracker app",
+        "project_name": "Personal Finance Tracker",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze user requirements"
+            },
+            {
+                "stage": "Design",
+                "description": "Create system architecture, user interface, and database design"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the application with chosen tech stack"
+            },
+            {
+                "stage": "Testing",
+                "description": "Conduct unit testing, integration testing, and user acceptance testing"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the application to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and fix issues in the application"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 2,
+                "Implementation": 4,
+                "Testing": 3,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User registers for an account",
+            "User logs in to the application",
+            "User adds a new transaction",
+            "User views transaction history"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "id",
+                        "username",
+                        "password"
+                    ],
+                    "methods": [
+                        "login",
+                        "register"
+                    ]
+                },
+                {
+                    "name": "Transaction",
+                    "attributes": [
+                        "id",
+                        "user_id",
+                        "amount",
+                        "date"
+                    ],
+                    "methods": [
+                        "add",
+                        "view"
+                    ]
+                },
+                {
+                    "name": "Account",
+                    "attributes": [
+                        "id",
+                        "user_id",
+                        "balance"
+                    ],
+                    "methods": [
+                        "deposit",
+                        "withdraw"
+                    ]
+                }
+            ],
+            "relationships": [
+                "User has many Transactions",
+                "Transaction belongs to User",
+                "Account belongs to User"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "login"
+                },
+                {
+                    "actor": "System",
+                    "message": "authenticate"
+                },
+                {
+                    "actor": "System",
+                    "message": "return user data"
+                }
+            ],
+            "lifelines": [
+                "User",
+                "System"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Add Transaction",
+                "View Transaction History"
+            ],
+            "system_boundary": {
+                "system_name": "Personal Finance Tracker",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Add Transaction",
+                    "View Transaction History"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration process",
+            "steps": [
+                "Start",
+                "User fills registration form",
+                "Validate user input",
+                "Create user account",
+                "Send confirmation email",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user input valid?",
+                    "yes": "Create user account",
+                    "no": "Display error message"
+                },
+                {
+                    "condition": "Is email sent successfully?",
+                    "yes": "End",
+                    "no": "Retry sending email"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a AI-powered resume builder",
+        "project_name": "AI Resume Builder",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements for the AI-powered resume builder"
+            },
+            {
+                "stage": "Design",
+                "description": "Design the architecture and user interface for the AI-powered resume builder"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the AI-powered resume builder using Python, Flask, and SQLite"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test the AI-powered resume builder for functionality, usability, and performance"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the AI-powered resume builder on a cloud platform"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Maintain and update the AI-powered resume builder with new features and technologies"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 3,
+                "Design": 4,
+                "Implementation": 12,
+                "Testing": 6,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 1500,
+                "Design": 2000,
+                "Implementation": 6000,
+                "Testing": 3000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 1,
+                "Design": 1,
+                "Implementation": 3,
+                "Testing": 2,
+                "Deployment": 1,
+                "Maintenance": 1
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User creates an account and logs in to the AI-powered resume builder",
+            "User uploads their resume and receives suggestions for improvement",
+            "User searches for job openings and receives recommendations based on their skills and experience"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "username",
+                        "password",
+                        "resume"
+                    ],
+                    "methods": [
+                        "login",
+                        "uploadResume",
+                        "searchJobs"
+                    ]
+                },
+                {
+                    "name": "Resume",
+                    "attributes": [
+                        "skills",
+                        "experience",
+                        "education"
+                    ],
+                    "methods": [
+                        "suggestImprovements",
+                        "matchJobs"
+                    ]
+                },
+                {
+                    "name": "Job",
+                    "attributes": [
+                        "title",
+                        "description",
+                        "requirements"
+                    ],
+                    "methods": [
+                        "matchResume",
+                        "recommend"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "type": "composition",
+                    "class1": "User",
+                    "class2": "Resume"
+                },
+                {
+                    "type": "association",
+                    "class1": "User",
+                    "class2": "Job"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "AI Resume Builder"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "login"
+                },
+                {
+                    "actor": "AI Resume Builder",
+                    "message": "validate credentials"
+                },
+                {
+                    "actor": "User",
+                    "message": "upload resume"
+                },
+                {
+                    "actor": "AI Resume Builder",
+                    "message": "analyze resume"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "lifetime": "login to logout"
+                },
+                {
+                    "actor": "AI Resume Builder",
+                    "lifetime": "startup to shutdown"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Create Account",
+                "Login",
+                "Upload Resume",
+                "Search Jobs",
+                "Match Resume"
+            ],
+            "system_boundary": {
+                "system_name": "AI Resume Builder System",
+                "enclosed_use_cases": [
+                    "Create Account",
+                    "Login",
+                    "Upload Resume",
+                    "Search Jobs",
+                    "Match Resume"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and resume upload process",
+            "steps": [
+                "Start",
+                "User creates account",
+                "User logs in",
+                "User uploads resume",
+                "AI Resume Builder analyzes resume",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Proceed to upload resume",
+                    "no": "Redirect to login"
+                },
+                {
+                    "condition": "Is resume uploaded?",
+                    "yes": "Analyze resume",
+                    "no": "Notify user to upload resume"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a language learning chatbot",
+        "project_name": "LinguaBot",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and timelines for LinguaBot"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements for LinguaBot's language learning features"
+            },
+            {
+                "stage": "Design",
+                "description": "Design the architecture and user interface for LinguaBot"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the core functionality of LinguaBot"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test LinguaBot's features and ensure quality"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy LinguaBot on cloud platforms and configure for user access"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor and update LinguaBot to ensure continued performance and security"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 3,
+                "Implementation": 12,
+                "Testing": 6,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 1500,
+                "Implementation": 6000,
+                "Testing": 3000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": "Project Manager",
+                "Requirements Analysis": "Business Analyst",
+                "Design": "UI/UX Designer",
+                "Implementation": "Software Developers",
+                "Testing": "QA Engineers",
+                "Deployment": "DevOps Engineer",
+                "Maintenance": "Support Team"
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User interacts with LinguaBot to learn a new language",
+            "User receives personalized language lessons and exercises",
+            "User tracks progress and receives feedback from LinguaBot"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "username",
+                        "password",
+                        "language_level"
+                    ],
+                    "methods": [
+                        "login",
+                        "register",
+                        "learn"
+                    ]
+                },
+                {
+                    "name": "Lesson",
+                    "attributes": [
+                        "topic",
+                        "level",
+                        "content"
+                    ],
+                    "methods": [
+                        "display",
+                        "practice",
+                        "review"
+                    ]
+                },
+                {
+                    "name": "Exercise",
+                    "attributes": [
+                        "type",
+                        "question",
+                        "answer"
+                    ],
+                    "methods": [
+                        "generate",
+                        "submit",
+                        "evaluate"
+                    ]
+                }
+            ],
+            "relationships": [
+                "User has many Lessons",
+                "Lesson has many Exercises"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "LinguaBot"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "login request",
+                    "recipient": "LinguaBot"
+                },
+                {
+                    "actor": "LinguaBot",
+                    "message": "login response",
+                    "recipient": "User"
+                },
+                {
+                    "actor": "User",
+                    "message": "lesson request",
+                    "recipient": "LinguaBot"
+                },
+                {
+                    "actor": "LinguaBot",
+                    "message": "lesson response",
+                    "recipient": "User"
+                }
+            ],
+            "lifelines": [
+                "User",
+                "LinguaBot"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Learn Language",
+                "Track Progress",
+                "Manage Lessons"
+            ],
+            "system_boundary": {
+                "system_name": "LinguaBot System",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Learn Language",
+                    "Track Progress",
+                    "Manage Lessons"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and login process",
+            "steps": [
+                "Start",
+                "User clicks register",
+                "Enter username and password",
+                "Verify username and password",
+                "Create account",
+                "Login",
+                "Redirect to dashboard",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is username available?",
+                    "yes": "Create account",
+                    "no": "Notify user and ask for new username"
+                },
+                {
+                    "condition": "Is password valid?",
+                    "yes": "Create account",
+                    "no": "Notify user and ask for new password"
+                },
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Redirect to dashboard",
+                    "no": "Redirect to login page"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a telemedicine consultation platform",
+        "project_name": "TeleMed",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and timelines"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create architectural and detailed designs"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the platform"
+            },
+            {
+                "stage": "Testing",
+                "description": "Conduct unit, integration, and system testing"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the platform to production"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and maintain the platform"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Use case diagram"
+        ],
+        "scenarios": [
+            "Patient consultation",
+            "Doctor appointment scheduling",
+            "Medical record management"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "Patient",
+                    "attributes": [
+                        "name",
+                        "age",
+                        "medical_history"
+                    ],
+                    "methods": [
+                        "scheduleAppointment",
+                        "viewMedicalRecords"
+                    ]
+                },
+                {
+                    "name": "Doctor",
+                    "attributes": [
+                        "name",
+                        "specialty",
+                        "availability"
+                    ],
+                    "methods": [
+                        "scheduleAppointment",
+                        "viewPatientRecords"
+                    ]
+                },
+                {
+                    "name": "Appointment",
+                    "attributes": [
+                        "date",
+                        "time",
+                        "doctor"
+                    ],
+                    "methods": [
+                        "schedule",
+                        "cancel"
+                    ]
+                }
+            ],
+            "relationships": [
+                "Patient has many Appointments",
+                "Doctor has many Appointments"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "Patient",
+                "Doctor"
+            ],
+            "messages": [
+                "scheduleAppointment",
+                "viewMedicalRecords",
+                "scheduleAppointment",
+                "viewPatientRecords"
+            ],
+            "lifelines": [
+                "Patient",
+                "Doctor",
+                "Appointment"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "Patient",
+                "Doctor",
+                "Admin"
+            ],
+            "use_cases": [
+                "Schedule Appointment",
+                "View Medical Records",
+                "Manage Appointments",
+                "Manage Patient Records"
+            ],
+            "system_boundary": {
+                "system_name": "TeleMed",
+                "enclosed_use_cases": [
+                    "Schedule Appointment",
+                    "View Medical Records",
+                    "Manage Appointments",
+                    "Manage Patient Records"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "Patient consultation process",
+            "steps": [
+                "Start",
+                "Patient logs in",
+                "Patient searches for doctor",
+                "Patient schedules appointment",
+                "Doctor confirms appointment",
+                "Patient attends consultation",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is patient authenticated?",
+                    "yes": "Patient searches for doctor",
+                    "no": "Redirect to login"
+                },
+                {
+                    "condition": "Is doctor available?",
+                    "yes": "Patient schedules appointment",
+                    "no": "Notify patient of unavailability"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a freelancer marketplace",
+        "project_name": "Freelancer Marketplace",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create architectural, technical, and user interface designs"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the software application"
+            },
+            {
+                "stage": "Testing",
+                "description": "Verify the software meets requirements and works as expected"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the software to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and fix issues in the software"
+            }
+        ],
+        "estimations": {
+            "time": "12 months",
+            "cost": "500,000 USD",
+            "resource": "10 developers, 2 designers, 1 project manager"
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User registration",
+            "Freelancer profile creation",
+            "Project posting",
+            "Bidding and selection",
+            "Project management and payment"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "register",
+                        "login"
+                    ]
+                },
+                {
+                    "name": "Freelancer",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "skills"
+                    ],
+                    "methods": [
+                        "createProfile",
+                        "bidOnProject"
+                    ]
+                },
+                {
+                    "name": "Project",
+                    "attributes": [
+                        "id",
+                        "title",
+                        "description"
+                    ],
+                    "methods": [
+                        "postProject",
+                        "manageBids"
+                    ]
+                }
+            ],
+            "relationships": [
+                "User has many Freelancers",
+                "Freelancer has many Projects"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "Freelancer"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "Register"
+                },
+                {
+                    "actor": "Freelancer",
+                    "message": "Create profile"
+                },
+                {
+                    "actor": "User",
+                    "message": "Post project"
+                },
+                {
+                    "actor": "Freelancer",
+                    "message": "Bid on project"
+                }
+            ],
+            "lifelines": [
+                "User",
+                "Freelancer",
+                "Project"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Freelancer",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Create profile",
+                "Post project",
+                "Bid on project",
+                "Manage project"
+            ],
+            "system_boundary": {
+                "system_name": "Freelancer Marketplace",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Create profile",
+                    "Post project",
+                    "Bid on project",
+                    "Manage project"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and login process",
+            "steps": [
+                "Start",
+                "User clicks register",
+                "User fills registration form",
+                "User submits form",
+                "System checks availability of username",
+                "System sends verification email",
+                "User verifies email",
+                "User logs in",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is username available?",
+                    "yes": "System sends verification email",
+                    "no": "System prompts user to choose another username"
+                },
+                {
+                    "condition": "Is user verified?",
+                    "yes": "User logs in",
+                    "no": "System prompts user to verify email"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a virtual interior design tool",
+        "project_name": "Virtual Interior Design Tool",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope and objectives"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements"
+            },
+            {
+                "stage": "Design",
+                "description": "Create detailed design documents"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the virtual interior design tool"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test the tool for functionality and usability"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the tool to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Maintain and update the tool as needed"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "UML diagrams"
+        ],
+        "scenarios": [
+            "User creates a new room design",
+            "User adds furniture to a room design",
+            "User shares a room design with a friend"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "Room",
+                    "attributes": [
+                        "length",
+                        "width",
+                        "height"
+                    ],
+                    "methods": [
+                        "addFurniture",
+                        "removeFurniture"
+                    ]
+                },
+                {
+                    "name": "Furniture",
+                    "attributes": [
+                        "type",
+                        "size",
+                        "color"
+                    ],
+                    "methods": [
+                        "move",
+                        "rotate"
+                    ]
+                }
+            ],
+            "relationships": [
+                "A Room can have multiple Furniture",
+                "A Furniture belongs to one Room"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "Create new room design"
+                },
+                {
+                    "actor": "System",
+                    "message": "Create new room design"
+                },
+                {
+                    "actor": "User",
+                    "message": "Add furniture to room design"
+                },
+                {
+                    "actor": "System",
+                    "message": "Add furniture to room design"
+                }
+            ],
+            "lifelines": [
+                "User",
+                "System"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Designer"
+            ],
+            "use_cases": [
+                "Create Room Design",
+                "Add Furniture",
+                "Share Design"
+            ],
+            "system_boundary": {
+                "system_name": "Virtual Interior Design Tool",
+                "enclosed_use_cases": [
+                    "Create Room Design",
+                    "Add Furniture",
+                    "Share Design"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and login process",
+            "steps": [
+                "Start",
+                "User clicks register",
+                "Enter username and password",
+                "Verify username and password",
+                "Login",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is username available?",
+                    "yes": "Create account",
+                    "no": "Choose new username"
+                },
+                {
+                    "condition": "Is password valid?",
+                    "yes": "Create account",
+                    "no": "Enter new password"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a subscription box management app",
+        "project_name": "Subscription Box Management System",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create system design and architecture"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the system"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test the system for defects and quality"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the system to production"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Maintain and update the system"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 4,
+                "Implementation": 12,
+                "Testing": 6,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 2000,
+                "Implementation": 6000,
+                "Testing": 3000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 2,
+                "Implementation": 4,
+                "Testing": 2,
+                "Deployment": 1,
+                "Maintenance": 1
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User registers for a subscription",
+            "User manages their subscription",
+            "Admin manages subscription boxes"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "register",
+                        "login"
+                    ]
+                },
+                {
+                    "name": "Subscription",
+                    "attributes": [
+                        "id",
+                        "user_id",
+                        "box_type"
+                    ],
+                    "methods": [
+                        "create",
+                        "update"
+                    ]
+                },
+                {
+                    "name": "Box",
+                    "attributes": [
+                        "id",
+                        "type",
+                        "contents"
+                    ],
+                    "methods": [
+                        "create",
+                        "update"
+                    ]
+                }
+            ],
+            "relationships": [
+                "User has one Subscription",
+                "Subscription has one Box"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "messages": [
+                "User registers for a subscription",
+                "Admin creates a new subscription box"
+            ],
+            "lifelines": [
+                "User",
+                "Admin",
+                "Subscription Box"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Manage Subscription",
+                "Create Subscription Box",
+                "Update Subscription Box"
+            ],
+            "system_boundary": {
+                "system_name": "Subscription Box Management System",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Manage Subscription",
+                    "Create Subscription Box",
+                    "Update Subscription Box"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and subscription management process",
+            "steps": [
+                "Start",
+                "User registers",
+                "Check user credentials",
+                "Create user account",
+                "Assign subscription box",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Create user account",
+                    "no": "Redirect to login"
+                },
+                {
+                    "condition": "Is subscription box available?",
+                    "yes": "Assign subscription box",
+                    "no": "Notify user of unavailability"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a pet care and tracking app",
+        "project_name": "PetCareTracker",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create system architecture, user interface, and database design"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop software components and integrate them"
+            },
+            {
+                "stage": "Testing",
+                "description": "Verify software meets requirements and works as expected"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Release software to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and fix issues in production environment"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User registers and logs in to the app",
+            "User adds a pet and tracks its activity",
+            "User receives notifications for pet care reminders"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "login",
+                        "logout"
+                    ]
+                },
+                {
+                    "name": "Pet",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "type"
+                    ],
+                    "methods": [
+                        "add",
+                        "update"
+                    ]
+                },
+                {
+                    "name": "Activity",
+                    "attributes": [
+                        "id",
+                        "type",
+                        "date"
+                    ],
+                    "methods": [
+                        "log",
+                        "view"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "class1": "User",
+                    "class2": "Pet",
+                    "relationship": "one-to-many"
+                },
+                {
+                    "class1": "Pet",
+                    "class2": "Activity",
+                    "relationship": "one-to-many"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "login"
+                },
+                {
+                    "actor": "System",
+                    "message": "authenticate"
+                },
+                {
+                    "actor": "User",
+                    "message": "add pet"
+                },
+                {
+                    "actor": "System",
+                    "message": "save pet data"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "lifetime": "login to logout"
+                },
+                {
+                    "actor": "System",
+                    "lifetime": "app startup to shutdown"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Add Pet",
+                "Track Activity",
+                "Receive Notifications"
+            ],
+            "system_boundary": {
+                "system_name": "PetCareTracker",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Add Pet",
+                    "Track Activity",
+                    "Receive Notifications"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and login process",
+            "steps": [
+                "Start",
+                "User clicks register",
+                "Enter user data",
+                "Validate user data",
+                "Save user data",
+                "Login",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user data valid?",
+                    "yes": "Save user data",
+                    "no": "Display error message"
+                },
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Proceed to app",
+                    "no": "Redirect to login"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a online tutoring platform",
+        "project_name": "Online Tutoring Platform",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create detailed design documents and prototypes"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the online tutoring platform"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test the platform for functionality and usability"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the platform to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Maintain and update the platform as needed"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            {
+                "chart": "Gantt chart",
+                "description": "Visual representation of project timeline"
+            },
+            {
+                "chart": "ER diagram",
+                "description": "Entity-relationship diagram of database schema"
+            },
+            {
+                "chart": "Flowchart",
+                "description": "Visual representation of user registration process"
+            }
+        ],
+        "scenarios": [
+            {
+                "scenario": "User registration",
+                "description": "User creates an account on the platform"
+            },
+            {
+                "scenario": "Tutor registration",
+                "description": "Tutor creates an account on the platform"
+            },
+            {
+                "scenario": "Booking a session",
+                "description": "User books a tutoring session with a tutor"
+            }
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "class": "User",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "login",
+                        "logout"
+                    ]
+                },
+                {
+                    "class": "Tutor",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "subject"
+                    ],
+                    "methods": [
+                        "login",
+                        "logout"
+                    ]
+                },
+                {
+                    "class": "Session",
+                    "attributes": [
+                        "id",
+                        "user_id",
+                        "tutor_id",
+                        "subject"
+                    ],
+                    "methods": [
+                        "book",
+                        "cancel"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "class1": "User",
+                    "class2": "Session",
+                    "relationship": "one-to-many"
+                },
+                {
+                    "class1": "Tutor",
+                    "class2": "Session",
+                    "relationship": "one-to-many"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "Tutor"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "book session",
+                    "receiver": "Tutor"
+                },
+                {
+                    "actor": "Tutor",
+                    "message": "accept session",
+                    "receiver": "User"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "lifetime": "from booking to session completion"
+                },
+                {
+                    "actor": "Tutor",
+                    "lifetime": "from session acceptance to session completion"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Tutor",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Book session",
+                "Cancel session",
+                "Manage users",
+                "Manage tutors"
+            ],
+            "system_boundary": {
+                "system_name": "Online Tutoring Platform",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Book session",
+                    "Cancel session",
+                    "Manage users",
+                    "Manage tutors"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration process",
+            "steps": [
+                "Start",
+                "Enter email",
+                "Enter password",
+                "Confirm password",
+                "Submit",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is email valid?",
+                    "yes": "Proceed to password entry",
+                    "no": "Display error message"
+                },
+                {
+                    "condition": "Do passwords match?",
+                    "yes": "Proceed to submission",
+                    "no": "Display error message"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a AI writing assistant",
+        "project_name": "AI Writing Assistant Project",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create detailed design documents and prototypes"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the AI writing assistant software"
+            },
+            {
+                "stage": "Testing",
+                "description": "Conduct unit testing, integration testing, and system testing"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the AI writing assistant software to production"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and maintain the AI writing assistant software"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User generates text using AI writing assistant",
+            "User edits text generated by AI writing assistant"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "username",
+                        "password"
+                    ],
+                    "methods": [
+                        "login",
+                        "logout"
+                    ]
+                },
+                {
+                    "name": "AIWritingAssistant",
+                    "attributes": [
+                        "text",
+                        "language"
+                    ],
+                    "methods": [
+                        "generateText",
+                        "editText"
+                    ]
+                }
+            ],
+            "relationships": [
+                "User uses AIWritingAssistant"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "AIWritingAssistant"
+            ],
+            "messages": [
+                "login request",
+                "text generation request",
+                "text editing request"
+            ],
+            "lifelines": [
+                "User login",
+                "AIWritingAssistant processing",
+                "User editing"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Generate Text",
+                "Edit Text"
+            ],
+            "system_boundary": {
+                "system_name": "AI Writing Assistant System",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Generate Text",
+                    "Edit Text"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and text generation process",
+            "steps": [
+                "Start",
+                "User registers",
+                "User logs in",
+                "User requests text generation",
+                "AIWritingAssistant generates text",
+                "User edits text",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user registered?",
+                    "yes": "User logs in",
+                    "no": "User registers"
+                },
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "User requests text generation",
+                    "no": "Redirect to login"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a sustainable shopping marketplace",
+        "project_name": "EcoShop",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze stakeholder requirements"
+            },
+            {
+                "stage": "Design",
+                "description": "Create detailed design documents and prototypes"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the software application"
+            },
+            {
+                "stage": "Testing",
+                "description": "Conduct unit testing, integration testing, and system testing"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the software application to production"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and fix issues in the production environment"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User registration",
+            "Product search",
+            "Order placement",
+            "Payment processing"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "register",
+                        "login"
+                    ]
+                },
+                {
+                    "name": "Product",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "price"
+                    ],
+                    "methods": [
+                        "search",
+                        "purchase"
+                    ]
+                },
+                {
+                    "name": "Order",
+                    "attributes": [
+                        "id",
+                        "user_id",
+                        "product_id"
+                    ],
+                    "methods": [
+                        "placeOrder",
+                        "cancelOrder"
+                    ]
+                }
+            ],
+            "relationships": [
+                "User - Order (one-to-many)",
+                "Product - Order (one-to-many)"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "Search product"
+                },
+                {
+                    "actor": "System",
+                    "message": "Return search results"
+                },
+                {
+                    "actor": "User",
+                    "message": "Place order"
+                },
+                {
+                    "actor": "System",
+                    "message": "Process payment"
+                }
+            ],
+            "lifelines": [
+                "User",
+                "System"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Search product",
+                "Place order",
+                "Manage products"
+            ],
+            "system_boundary": {
+                "system_name": "EcoShop",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Search product",
+                    "Place order",
+                    "Manage products"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration process",
+            "steps": [
+                "Start",
+                "User submits registration form",
+                "Validate user input",
+                "Create user account",
+                "Send verification email",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user input valid?",
+                    "yes": "Create user account",
+                    "no": "Display error message"
+                },
+                {
+                    "condition": "Is user verified?",
+                    "yes": "Allow login",
+                    "no": "Send verification email"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a on-demand home services app",
+        "project_name": "Home Services On-Demand",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables for the on-demand home services app"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements for the on-demand home services app, including user registration, service booking, and payment processing"
+            },
+            {
+                "stage": "Design",
+                "description": "Design the architecture, user interface, and user experience for the on-demand home services app"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the on-demand home services app using a suitable tech stack, such as Flask and SQLite"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test the on-demand home services app for functionality, performance, and security"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the on-demand home services app on a suitable platform, such as a cloud-based server"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Maintain and update the on-demand home services app to ensure continued functionality and security"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": "2 weeks",
+                "Requirements Analysis": "3 weeks",
+                "Design": "4 weeks",
+                "Implementation": "12 weeks",
+                "Testing": "4 weeks",
+                "Deployment": "2 weeks",
+                "Maintenance": "Ongoing"
+            },
+            "cost": {
+                "Planning": "1000",
+                "Requirements Analysis": "1500",
+                "Design": "2000",
+                "Implementation": "12000",
+                "Testing": "2000",
+                "Deployment": "1000",
+                "Maintenance": "500"
+            },
+            "resource": {
+                "Planning": "1 project manager",
+                "Requirements Analysis": "1 business analyst",
+                "Design": "1 UX designer",
+                "Implementation": "2 developers",
+                "Testing": "1 tester",
+                "Deployment": "1 devops engineer",
+                "Maintenance": "1 developer"
+            }
+        },
+        "example_charts": [
+            {
+                "chart": "Gantt chart",
+                "description": "Visual representation of the project schedule"
+            },
+            {
+                "chart": "ER diagram",
+                "description": "Entity-relationship diagram for the on-demand home services app database"
+            },
+            {
+                "chart": "Flowchart",
+                "description": "Visual representation of the user registration process"
+            }
+        ],
+        "scenarios": [
+            {
+                "scenario": "User registration",
+                "description": "A new user registers for the on-demand home services app"
+            },
+            {
+                "scenario": "Service booking",
+                "description": "A registered user books a home service, such as house cleaning or plumbing"
+            },
+            {
+                "scenario": "Payment processing",
+                "description": "A user pays for a booked home service using a credit card or other payment method"
+            }
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "username",
+                        "password",
+                        "email"
+                    ],
+                    "methods": [
+                        "register",
+                        "login",
+                        "bookService"
+                    ]
+                },
+                {
+                    "name": "Service",
+                    "attributes": [
+                        "name",
+                        "description",
+                        "price"
+                    ],
+                    "methods": [
+                        "book",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "Payment",
+                    "attributes": [
+                        "amount",
+                        "method"
+                    ],
+                    "methods": [
+                        "process"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "type": "one-to-many",
+                    "class1": "User",
+                    "class2": "Service"
+                },
+                {
+                    "type": "many-to-one",
+                    "class1": "Service",
+                    "class2": "Payment"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                {
+                    "name": "User",
+                    "description": "A registered user of the on-demand home services app"
+                },
+                {
+                    "name": "System",
+                    "description": "The on-demand home services app system"
+                }
+            ],
+            "messages": [
+                {
+                    "from": "User",
+                    "to": "System",
+                    "message": "Register"
+                },
+                {
+                    "from": "System",
+                    "to": "User",
+                    "message": "Registration successful"
+                },
+                {
+                    "from": "User",
+                    "to": "System",
+                    "message": "Book service"
+                },
+                {
+                    "from": "System",
+                    "to": "User",
+                    "message": "Service booked successfully"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "description": "The user's interaction with the system"
+                },
+                {
+                    "actor": "System",
+                    "description": "The system's response to the user's interactions"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                {
+                    "name": "User",
+                    "description": "A registered user of the on-demand home services app"
+                },
+                {
+                    "name": "Admin",
+                    "description": "An administrator of the on-demand home services app"
+                }
+            ],
+            "use_cases": [
+                {
+                    "name": "Register",
+                    "description": "A new user registers for the on-demand home services app"
+                },
+                {
+                    "name": "Login",
+                    "description": "A registered user logs in to the on-demand home services app"
+                },
+                {
+                    "name": "Book service",
+                    "description": "A registered user books a home service, such as house cleaning or plumbing"
+                },
+                {
+                    "name": "Manage services",
+                    "description": "An administrator manages the available home services, including adding, editing, and deleting services"
+                }
+            ],
+            "system_boundary": {
+                "system_name": "On-Demand Home Services App",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Book service",
+                    "Manage services"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration process",
+            "steps": [
+                "Start",
+                "Enter username and password",
+                "Check if username is available",
+                "Create new user account",
+                "Send confirmation email",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is username available?",
+                    "yes": "Create new user account",
+                    "no": "Display error message"
+                },
+                {
+                    "condition": "Is email confirmed?",
+                    "yes": "Activate user account",
+                    "no": "Send reminder email"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a fitness and meal planning coach",
+        "project_name": "Fitness Coach",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope and objectives"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze user requirements"
+            },
+            {
+                "stage": "Design",
+                "description": "Create system architecture and user interface"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop software components and integrate them"
+            },
+            {
+                "stage": "Testing",
+                "description": "Verify software functionality and performance"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Release software to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor and update software to ensure continued functionality"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            {
+                "chart": "Gantt chart",
+                "description": "Visual representation of project schedule"
+            },
+            {
+                "chart": "ER diagram",
+                "description": "Entity-relationship model of database schema"
+            },
+            {
+                "chart": "Flowchart",
+                "description": "Visual representation of system processes"
+            }
+        ],
+        "scenarios": [
+            {
+                "scenario": "User registration",
+                "description": "New user signs up for fitness coaching services"
+            },
+            {
+                "scenario": "Meal planning",
+                "description": "System generates personalized meal plan based on user preferences and dietary needs"
+            },
+            {
+                "scenario": "Workout tracking",
+                "description": "User logs workouts and tracks progress over time"
+            }
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "name",
+                        "email",
+                        "password"
+                    ],
+                    "methods": [
+                        "login",
+                        "logout"
+                    ]
+                },
+                {
+                    "name": "MealPlan",
+                    "attributes": [
+                        "name",
+                        "description",
+                        "ingredients"
+                    ],
+                    "methods": [
+                        "generate",
+                        "update"
+                    ]
+                },
+                {
+                    "name": "Workout",
+                    "attributes": [
+                        "name",
+                        "description",
+                        "duration"
+                    ],
+                    "methods": [
+                        "log",
+                        "track"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "type": "one-to-many",
+                    "class1": "User",
+                    "class2": "MealPlan"
+                },
+                {
+                    "type": "one-to-many",
+                    "class1": "User",
+                    "class2": "Workout"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "Login request"
+                },
+                {
+                    "actor": "System",
+                    "message": "Login response"
+                },
+                {
+                    "actor": "User",
+                    "message": "Meal plan request"
+                },
+                {
+                    "actor": "System",
+                    "message": "Meal plan response"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "lifetime": "login to logout"
+                },
+                {
+                    "actor": "System",
+                    "lifetime": "always"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Generate Meal Plan",
+                "Log Workout"
+            ],
+            "system_boundary": {
+                "system_name": "Fitness Coach System",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Generate Meal Plan",
+                    "Log Workout"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and meal planning process",
+            "steps": [
+                "Start",
+                "User registration",
+                "Login",
+                "Generate meal plan",
+                "Log workout",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Generate meal plan",
+                    "no": "Redirect to login"
+                },
+                {
+                    "condition": "Is meal plan generated?",
+                    "yes": "Log workout",
+                    "no": "Generate meal plan"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a crowdfunding platform for creators",
+        "project_name": "Crowdfund Creators",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope and objectives"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements"
+            },
+            {
+                "stage": "Design",
+                "description": "Create detailed design documents"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the crowdfunding platform"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test the platform for bugs and errors"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the platform to production"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Maintain and update the platform"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "Creator creates a campaign",
+            "Backer pledges to a campaign",
+            "Campaign reaches funding goal"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "Creator",
+                    "attributes": [
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "createCampaign",
+                        "updateCampaign"
+                    ]
+                },
+                {
+                    "name": "Campaign",
+                    "attributes": [
+                        "title",
+                        "description",
+                        "goal"
+                    ],
+                    "methods": [
+                        "pledge",
+                        "updateStatus"
+                    ]
+                },
+                {
+                    "name": "Backer",
+                    "attributes": [
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "pledge",
+                        "viewCampaigns"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "class1": "Creator",
+                    "class2": "Campaign",
+                    "relationship": "one-to-many"
+                },
+                {
+                    "class1": "Backer",
+                    "class2": "Campaign",
+                    "relationship": "many-to-many"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "Creator",
+                "Backer"
+            ],
+            "messages": [
+                {
+                    "actor": "Creator",
+                    "message": "Create campaign"
+                },
+                {
+                    "actor": "Backer",
+                    "message": "Pledge to campaign"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "Creator",
+                    "events": [
+                        "Create campaign",
+                        "Update campaign"
+                    ]
+                },
+                {
+                    "actor": "Backer",
+                    "events": [
+                        "Pledge to campaign",
+                        "View campaigns"
+                    ]
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "Creator",
+                "Backer",
+                "Admin"
+            ],
+            "use_cases": [
+                "Create campaign",
+                "Pledge to campaign",
+                "View campaigns",
+                "Update campaign",
+                "Manage campaigns"
+            ],
+            "system_boundary": {
+                "system_name": "Crowdfunding Platform",
+                "enclosed_use_cases": [
+                    "Create campaign",
+                    "Pledge to campaign",
+                    "View campaigns",
+                    "Update campaign",
+                    "Manage campaigns"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration process",
+            "steps": [
+                "Start",
+                "User fills out registration form",
+                "Check if user exists",
+                "Create new user account",
+                "Send verification email",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user already registered?",
+                    "yes": "Redirect to login",
+                    "no": "Create new user account"
+                },
+                {
+                    "condition": "Is email verification successful?",
+                    "yes": "Activate user account",
+                    "no": "Resend verification email"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a voice-controlled recipe assistant",
+        "project_name": "Voice Recipe Assistant",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables for the voice-controlled recipe assistant"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements for the voice-controlled recipe assistant"
+            },
+            {
+                "stage": "Design",
+                "description": "Design the architecture and user interface for the voice-controlled recipe assistant"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the voice-controlled recipe assistant using a suitable tech stack"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test the voice-controlled recipe assistant for functionality and usability"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the voice-controlled recipe assistant on a suitable platform"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Maintain and update the voice-controlled recipe assistant as needed"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User asks for a recipe",
+            "User requests a recipe modification",
+            "User asks for nutrition information"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "Recipe",
+                    "attributes": [
+                        "name",
+                        "ingredients",
+                        "instructions"
+                    ],
+                    "methods": [
+                        "getRecipe",
+                        "modifyRecipe"
+                    ]
+                },
+                {
+                    "name": "User",
+                    "attributes": [
+                        "name",
+                        "voiceInput"
+                    ],
+                    "methods": [
+                        "requestRecipe",
+                        "provideFeedback"
+                    ]
+                }
+            ],
+            "relationships": [
+                "A User can request a Recipe",
+                "A Recipe can be modified by a User"
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "Voice Assistant"
+            ],
+            "messages": [
+                {
+                    "from": "User",
+                    "to": "Voice Assistant",
+                    "message": "Recipe request"
+                },
+                {
+                    "from": "Voice Assistant",
+                    "to": "User",
+                    "message": "Recipe response"
+                }
+            ],
+            "lifelines": [
+                "User",
+                "Voice Assistant"
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Request Recipe",
+                "Modify Recipe",
+                "Provide Feedback"
+            ],
+            "system_boundary": {
+                "system_name": "Voice Recipe Assistant System",
+                "enclosed_use_cases": [
+                    "Request Recipe",
+                    "Modify Recipe",
+                    "Provide Feedback"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User requests a recipe",
+            "steps": [
+                "Start",
+                "User requests a recipe",
+                "Check recipe availability",
+                "Provide recipe",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is recipe available?",
+                    "yes": "Provide recipe",
+                    "no": "Notify user of unavailability"
+                },
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Provide recipe",
+                    "no": "Redirect to login"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a secure file sharing platform",
+        "project_name": "SecureFileShare",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create detailed design documents and prototypes"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the secure file sharing platform"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test the platform for security, functionality, and performance"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the platform to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and maintain the platform"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User uploads a file",
+            "User shares a file with another user",
+            "User revokes access to a shared file"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "id",
+                        "username",
+                        "password"
+                    ],
+                    "methods": [
+                        "uploadFile",
+                        "shareFile"
+                    ]
+                },
+                {
+                    "name": "File",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "content"
+                    ],
+                    "methods": [
+                        "download",
+                        "delete"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "type": "one-to-many",
+                    "class1": "User",
+                    "class2": "File"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "uploadFile"
+                },
+                {
+                    "actor": "System",
+                    "message": "storeFile"
+                },
+                {
+                    "actor": "User",
+                    "message": "shareFile"
+                },
+                {
+                    "actor": "System",
+                    "message": "sendShareNotification"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "lifetime": "from start to end"
+                },
+                {
+                    "actor": "System",
+                    "lifetime": "from start to end"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Upload File",
+                "Share File",
+                "Revoke Access"
+            ],
+            "system_boundary": {
+                "system_name": "SecureFileShare",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Upload File",
+                    "Share File",
+                    "Revoke Access"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and file sharing process",
+            "steps": [
+                "Start",
+                "Register",
+                "Login",
+                "Upload File",
+                "Share File",
+                "Revoke Access",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Proceed",
+                    "no": "Redirect to login"
+                },
+                {
+                    "condition": "Is file shared?",
+                    "yes": "Notify recipient",
+                    "no": "Wait for share request"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a augmented reality (AR) travel guide",
+        "project_name": "AR Travel Guide",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables for the AR travel guide"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements for the AR travel guide, including user interface and experience"
+            },
+            {
+                "stage": "Design",
+                "description": "Design the architecture and user interface of the AR travel guide"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the AR travel guide using a suitable tech stack, such as ARKit or ARCore"
+            },
+            {
+                "stage": "Testing",
+                "description": "Test the AR travel guide for functionality, usability, and performance"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the AR travel guide on app stores and make it available for download"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Maintain and update the AR travel guide with new features and content"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "planning": 2,
+                "requirements_analysis": 4,
+                "design": 6,
+                "implementation": 12,
+                "testing": 8,
+                "deployment": 2,
+                "maintenance": 4
+            },
+            "cost": {
+                "planning": 1000,
+                "requirements_analysis": 2000,
+                "design": 3000,
+                "implementation": 6000,
+                "testing": 4000,
+                "deployment": 1000,
+                "maintenance": 2000
+            },
+            "resource": {
+                "planning": 1,
+                "requirements_analysis": 2,
+                "design": 3,
+                "implementation": 6,
+                "testing": 4,
+                "deployment": 1,
+                "maintenance": 2
+            }
+        },
+        "example_charts": [
+            {
+                "type": "Gantt chart",
+                "description": "Project timeline and task dependencies"
+            },
+            {
+                "type": "ER diagram",
+                "description": "Database schema and entity relationships"
+            },
+            {
+                "type": "Flowchart",
+                "description": "User registration and login process"
+            }
+        ],
+        "scenarios": [
+            {
+                "scenario": "User searches for a destination",
+                "description": "The user opens the app and searches for a destination, such as Paris or New York"
+            },
+            {
+                "scenario": "User views AR content",
+                "description": "The user views AR content, such as 3D models or videos, related to the destination"
+            },
+            {
+                "scenario": "User interacts with AR content",
+                "description": "The user interacts with AR content, such as tapping on a 3D model to view more information"
+            }
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "username",
+                        "password",
+                        "email"
+                    ],
+                    "methods": [
+                        "login",
+                        "register",
+                        "viewProfile"
+                    ]
+                },
+                {
+                    "name": "Destination",
+                    "attributes": [
+                        "name",
+                        "description",
+                        "location"
+                    ],
+                    "methods": [
+                        "getView",
+                        "getReviews"
+                    ]
+                },
+                {
+                    "name": "ARContent",
+                    "attributes": [
+                        "type",
+                        "url",
+                        "description"
+                    ],
+                    "methods": [
+                        "getView",
+                        "getInteractions"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "type": "one-to-many",
+                    "class1": "User",
+                    "class2": "Destination",
+                    "description": "A user can view many destinations"
+                },
+                {
+                    "type": "many-to-many",
+                    "class1": "Destination",
+                    "class2": "ARContent",
+                    "description": "A destination can have many AR content, and an AR content can be associated with many destinations"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "Search for destination",
+                    "recipient": "System"
+                },
+                {
+                    "actor": "System",
+                    "message": "Return search results",
+                    "recipient": "User"
+                },
+                {
+                    "actor": "User",
+                    "message": "View AR content",
+                    "recipient": "System"
+                },
+                {
+                    "actor": "System",
+                    "message": "Return AR content",
+                    "recipient": "User"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "lifetime": "Throughout the interaction"
+                },
+                {
+                    "actor": "System",
+                    "lifetime": "Throughout the interaction"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Search for destination",
+                "View AR content"
+            ],
+            "system_boundary": {
+                "system_name": "AR Travel Guide",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Search for destination",
+                    "View AR content"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and login process",
+            "steps": [
+                "Start",
+                "User clicks on register",
+                "User enters registration information",
+                "System checks if user exists",
+                "If user exists, redirect to login",
+                "If user does not exist, create new user account",
+                "User logs in",
+                "System checks if user is authenticated",
+                "If user is authenticated, redirect to home page",
+                "If user is not authenticated, redirect to login",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Redirect to home page",
+                    "no": "Redirect to login"
+                },
+                {
+                    "condition": "Does user exist?",
+                    "yes": "Redirect to login",
+                    "no": "Create new user account"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a interactive children's learning app",
+        "project_name": "KidsLearn",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create detailed design documents and prototypes"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the interactive children's learning app"
+            },
+            {
+                "stage": "Testing",
+                "description": "Conduct unit testing, integration testing, and user acceptance testing"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the app to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and fix issues in the app"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User registers for the app",
+            "User selects a learning module",
+            "User completes a learning activity",
+            "User earns rewards and badges"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "username",
+                        "password",
+                        "email"
+                    ],
+                    "methods": [
+                        "login",
+                        "logout"
+                    ]
+                },
+                {
+                    "name": "LearningModule",
+                    "attributes": [
+                        "title",
+                        "description",
+                        "activities"
+                    ],
+                    "methods": [
+                        "startModule",
+                        "completeModule"
+                    ]
+                },
+                {
+                    "name": "LearningActivity",
+                    "attributes": [
+                        "title",
+                        "description",
+                        "questions"
+                    ],
+                    "methods": [
+                        "startActivity",
+                        "submitActivity"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "class1": "User",
+                    "class2": "LearningModule",
+                    "relationship": "one-to-many"
+                },
+                {
+                    "class1": "LearningModule",
+                    "class2": "LearningActivity",
+                    "relationship": "one-to-many"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "login"
+                },
+                {
+                    "actor": "System",
+                    "message": "authenticate"
+                },
+                {
+                    "actor": "User",
+                    "message": "selectModule"
+                },
+                {
+                    "actor": "System",
+                    "message": "displayModule"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "lifetime": "from login to logout"
+                },
+                {
+                    "actor": "System",
+                    "lifetime": "from startup to shutdown"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Select Module",
+                "Complete Activity",
+                "View Rewards"
+            ],
+            "system_boundary": {
+                "system_name": "KidsLearn",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Select Module",
+                    "Complete Activity",
+                    "View Rewards"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and login process",
+            "steps": [
+                "Start",
+                "User clicks register",
+                "Enter username and password",
+                "Verify username and password",
+                "Create account",
+                "Login",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is username available?",
+                    "yes": "Create account",
+                    "no": "Notify user"
+                },
+                {
+                    "condition": "Is password valid?",
+                    "yes": "Create account",
+                    "no": "Notify user"
+                },
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Login",
+                    "no": "Redirect to login"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a e-commerce store builder for small businesses",
+        "project_name": "Ecommerce Store Builder",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and document functional and non-functional requirements"
+            },
+            {
+                "stage": "Design",
+                "description": "Create architectural, interface, and database designs"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the ecommerce store builder software"
+            },
+            {
+                "stage": "Testing",
+                "description": "Conduct unit, integration, and system testing"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the software to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and fix issues in the software"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": "2 weeks",
+                "Requirements Analysis": "4 weeks",
+                "Design": "6 weeks",
+                "Implementation": "16 weeks",
+                "Testing": "8 weeks",
+                "Deployment": "2 weeks",
+                "Maintenance": "Ongoing"
+            },
+            "cost": {
+                "Planning": "10000",
+                "Requirements Analysis": "20000",
+                "Design": "30000",
+                "Implementation": "80000",
+                "Testing": "40000",
+                "Deployment": "10000",
+                "Maintenance": "20000"
+            },
+            "resource": {
+                "Planning": "2",
+                "Requirements Analysis": "3",
+                "Design": "4",
+                "Implementation": "8",
+                "Testing": "4",
+                "Deployment": "2",
+                "Maintenance": "1"
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User registers for an account",
+            "User creates an online store",
+            "User adds products to the store",
+            "User manages orders and inventory"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "username",
+                        "password"
+                    ],
+                    "methods": [
+                        "login",
+                        "logout"
+                    ]
+                },
+                {
+                    "name": "Store",
+                    "attributes": [
+                        "name",
+                        "description"
+                    ],
+                    "methods": [
+                        "create",
+                        "update"
+                    ]
+                },
+                {
+                    "name": "Product",
+                    "attributes": [
+                        "name",
+                        "price"
+                    ],
+                    "methods": [
+                        "add",
+                        "remove"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "type": "one-to-one",
+                    "class1": "User",
+                    "class2": "Store"
+                },
+                {
+                    "type": "one-to-many",
+                    "class1": "Store",
+                    "class2": "Product"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "Create store"
+                },
+                {
+                    "actor": "System",
+                    "message": "Store created"
+                },
+                {
+                    "actor": "User",
+                    "message": "Add product"
+                },
+                {
+                    "actor": "System",
+                    "message": "Product added"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "start": "Create store",
+                    "end": "Add product"
+                },
+                {
+                    "actor": "System",
+                    "start": "Store created",
+                    "end": "Product added"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Create store",
+                "Add product",
+                "Manage orders"
+            ],
+            "system_boundary": {
+                "system_name": "Ecommerce Store Builder",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Create store",
+                    "Add product",
+                    "Manage orders"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and store creation process",
+            "steps": [
+                "Start",
+                "User registers for an account",
+                "User logs in",
+                "User creates an online store",
+                "User adds products to the store",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Create store",
+                    "no": "Redirect to login"
+                },
+                {
+                    "condition": "Is store created?",
+                    "yes": "Add products",
+                    "no": "Create store"
+                }
+            ]
+        }
+    },
+    {
+        "user_prompt": "I want a plan for a virtual coworking space for entrepreneurs",
+        "project_name": "Virtual Coworking Space",
+        "sdlc_stages": [
+            {
+                "stage": "Planning",
+                "description": "Define project scope, goals, and deliverables"
+            },
+            {
+                "stage": "Requirements Analysis",
+                "description": "Gather and analyze requirements from stakeholders"
+            },
+            {
+                "stage": "Design",
+                "description": "Create detailed design documents and prototypes"
+            },
+            {
+                "stage": "Implementation",
+                "description": "Develop the virtual coworking space platform"
+            },
+            {
+                "stage": "Testing",
+                "description": "Conduct unit testing, integration testing, and user acceptance testing"
+            },
+            {
+                "stage": "Deployment",
+                "description": "Deploy the platform to production environment"
+            },
+            {
+                "stage": "Maintenance",
+                "description": "Monitor, update, and maintain the platform"
+            }
+        ],
+        "estimations": {
+            "time": {
+                "Planning": 2,
+                "Requirements Analysis": 4,
+                "Design": 6,
+                "Implementation": 12,
+                "Testing": 8,
+                "Deployment": 2,
+                "Maintenance": 4
+            },
+            "cost": {
+                "Planning": 1000,
+                "Requirements Analysis": 2000,
+                "Design": 3000,
+                "Implementation": 6000,
+                "Testing": 4000,
+                "Deployment": 1000,
+                "Maintenance": 2000
+            },
+            "resource": {
+                "Planning": 1,
+                "Requirements Analysis": 2,
+                "Design": 3,
+                "Implementation": 6,
+                "Testing": 4,
+                "Deployment": 1,
+                "Maintenance": 2
+            }
+        },
+        "example_charts": [
+            "Gantt chart",
+            "ER diagram",
+            "Flowchart"
+        ],
+        "scenarios": [
+            "User registers for a virtual coworking space account",
+            "User books a virtual meeting room",
+            "User participates in a virtual networking event"
+        ],
+        "class_diagram": {
+            "classes": [
+                {
+                    "name": "User",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "email"
+                    ],
+                    "methods": [
+                        "register",
+                        "login"
+                    ]
+                },
+                {
+                    "name": "MeetingRoom",
+                    "attributes": [
+                        "id",
+                        "name",
+                        "capacity"
+                    ],
+                    "methods": [
+                        "book",
+                        "cancel"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "type": "one-to-many",
+                    "class1": "User",
+                    "class2": "MeetingRoom"
+                }
+            ]
+        },
+        "sequence_diagram": {
+            "actors": [
+                "User",
+                "System"
+            ],
+            "messages": [
+                {
+                    "actor": "User",
+                    "message": "Register"
+                },
+                {
+                    "actor": "System",
+                    "message": "Registration successful"
+                },
+                {
+                    "actor": "User",
+                    "message": "Book meeting room"
+                },
+                {
+                    "actor": "System",
+                    "message": "Meeting room booked successfully"
+                }
+            ],
+            "lifelines": [
+                {
+                    "actor": "User",
+                    "lifetime": "registration to meeting room booking"
+                },
+                {
+                    "actor": "System",
+                    "lifetime": "registration to meeting room booking"
+                }
+            ]
+        },
+        "use_case_diagram": {
+            "actors": [
+                "User",
+                "Admin"
+            ],
+            "use_cases": [
+                "Register",
+                "Login",
+                "Book Meeting Room",
+                "Manage Meeting Rooms"
+            ],
+            "system_boundary": {
+                "system_name": "Virtual Coworking Space",
+                "enclosed_use_cases": [
+                    "Register",
+                    "Login",
+                    "Book Meeting Room",
+                    "Manage Meeting Rooms"
+                ]
+            }
+        },
+        "flowchart": {
+            "description": "User registration and meeting room booking process",
+            "steps": [
+                "Start",
+                "User registers",
+                "User logs in",
+                "User searches for meeting room",
+                "User books meeting room",
+                "End"
+            ],
+            "decision_points": [
+                {
+                    "condition": "Is user authenticated?",
+                    "yes": "Proceed to meeting room search",
+                    "no": "Redirect to login"
+                },
+                {
+                    "condition": "Is meeting room available?",
+                    "yes": "Book meeting room",
+                    "no": "Notify user of unavailability"
+                }
+            ]
+        }
+    }
+]
