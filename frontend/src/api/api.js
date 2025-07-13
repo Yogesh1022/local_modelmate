@@ -17,6 +17,22 @@ export async function signup(name, email, password) {
   return res.json();
 }
 
+export async function verifyOtp(email, otp) {
+  const res = await fetch(`${API_BASE_URL}/auth/verify-otp`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, otp }),
+    credentials: "include",
+  });
+
+  if (!res.ok) {
+    const data = await res.json();
+    throw new Error(data.detail || "OTP verification failed");
+  }
+
+  return res.json();
+}
+
 export async function login(email, password) {
   const res = await fetch(`${API_BASE_URL}/auth/login`, {
     method: "POST",

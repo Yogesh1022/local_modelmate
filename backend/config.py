@@ -51,6 +51,23 @@ class Settings(BaseSettings):
         description="JWT token expiry time in seconds"
     )
 
+    # OTP settings
+    OTP_ISSUER: str = Field(
+        default="ModelMate",
+        description="OTP issuer name"
+    )
+    OTP_LENGTH: int = Field(
+        default=6,
+        ge=4,
+        le=8,
+        description="Length of OTP"
+    )
+    OTP_TTL: int = Field(
+        default=300,
+        ge=60,
+        description="OTP time to live in seconds"
+    )
+
     # Together.AI
     TOGETHER_API_KEY: Optional[str] = Field(
         default="",
@@ -77,6 +94,15 @@ class Settings(BaseSettings):
         if not os.path.isfile(value):
             logger.warning(f"PlantUML JAR file not found at: {value}")
         return value
+    
+    # Validate dataset path
+    @validator("DATASET_PATH")
+    def validate_dataset_path(cls, value: str) -> str:
+        dataset_dir = Path(value).parent
+        if not dataset_dir.exists():
+            logger.warning(f"Dataset directory not found at: {dataset_dir}")
+            dataset_dir.mkdir(parents=True, exist_ok=True)
+        return value
 
     # Validate JWT secret strength
     @validator("JWT_SECRET")
@@ -99,3 +125,6 @@ try:
 except Exception as e:
     logger.error(f"Failed to initialize settings: {str(e)}")
     raise
+
+
+# added otp issuer to settings and otp lenggth olsp ttl and enhance daset path

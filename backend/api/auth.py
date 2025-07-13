@@ -1,33 +1,40 @@
-import logging
-from typing import Any, Dict
-from datetime import datetime
-from fastapi import APIRouter, HTTPException, Depends, status
+from fastapi import APIRouter, Request, HTTPException, Depends, status
+from fastapi.responses import RedirectResponse
 from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import BaseModel, EmailStr, Field
+from typing import Any, Dict
+from datetime import datetime
+import logging
+
+from backend.models.user import UserOut
 from backend.services.auth_service import (
     create_user,
     authenticate_user,
     create_access_token,
+    verify_user_otp,
     get_current_user,
 )
-from backend.models.user import UserOut
 from backend.config import settings
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler("auth.log")
-    ]
-)
-logger = logging.getLogger(__name__)
 
 router = APIRouter(
     tags=["Authentication"],
-    responses={404: {"description": "Not found"}}
+    responses={404: {"description": "Not found"}},
+    prefix="/auth"
 )
+
+logger = logging.getLogger(__name__)
+
+# Basic placeholder for Google OAuth route
+@router.get("/google")
+async def google_oauth_redirect(request: Request):
+    """
+    Redirect to Google OAuth login page.
+    This is a placeholder implementation.
+    """
+    # Replace the URL below with your actual Google OAuth URL
+    google_oauth_url = "https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email profile"
+    logger.info("Redirecting to Google OAuth")
+    return RedirectResponse(url=google_oauth_url)
 
 class SignupRequest(BaseModel):
     name: str = Field(..., min_length=2, max_length=100, description="User's full name")
@@ -43,6 +50,13 @@ class TokenResponse(BaseModel):
     access_token: str = Field(..., description="JWT access token")
     token_type: str = Field(default="bearer", description="Token type")
     user: UserOut = Field(..., description="User details")
+
+class SignupResponse(BaseModel):
+    success: bool = Field(..., description="Whether the signup was successful")
+    message: str = Field(..., description="Status message")
+
+class VerifyOtpResponse(SignupResponse):
+    token: str = Field(..., description="JWT access token if verification succeeds")
 
 def clean_user_data(user: Dict[str, Any]) -> Dict[str, Any]:
     try:
@@ -65,26 +79,23 @@ def clean_user_data(user: Dict[str, Any]) -> Dict[str, Any]:
             detail="Error processing user data"
         )
 
-@router.post("/signup", response_model=TokenResponse, status_code=status.HTTP_201_CREATED)
-async def signup(data: SignupRequest) -> TokenResponse:
+@router.post("/signup", response_model=SignupResponse, status_code=status.HTTP_201_CREATED)
+async def signup(data: SignupRequest) -> SignupResponse:
     logger.info(f"Attempting to sign up user with email: {data.email}")
     try:
-        user = await create_user(data.name, data.email, data.password)
+        user, otp = await create_user(data.name, data.email, data.password)
         if not user:
             logger.warning(f"Signup failed: User with email {data.email} already exists")
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
-                detail="User already exists"
+                detail="Email already exists"
             )
 
-        token = create_access_token(str(user["_id"]))
-        user_clean = clean_user_data(user)
-
-        logger.info(f"User {data.email} signed up successfully")
-        return TokenResponse(
-            access_token=token,
-            token_type="bearer",
-            user=UserOut(**user_clean)
+        # Simulate OTP sending (replace with email service like SendGrid)
+        logger.info(f"OTP for {data.email}: {otp}")
+        return SignupResponse(
+            success=True,
+            message="OTP sent to your email."
         )
     except HTTPException:
         raise
@@ -93,6 +104,33 @@ async def signup(data: SignupRequest) -> TokenResponse:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Error creating user"
+        )
+
+@router.post("/verify-otp", response_model=VerifyOtpResponse)
+async def verify_otp(email: EmailStr, otp: str) -> VerifyOtpResponse:
+    logger.info(f"Attempting OTP verification for email: {email}")
+    try:
+        if await verify_user_otp(email, otp):
+            from backend.services.database import get_db
+            db = await get_db()
+            user = await db[settings.USERS_COLLECTION].find_one({"email": email.lower().strip()})
+            if user:
+                user["_id"] = str(user["_id"])
+                token = create_access_token(user["_id"])
+                return VerifyOtpResponse(
+                    success=True,
+                    message="Signup successful.",
+                    token=token
+                )
+            raise HTTPException(status_code=400, detail="User not found")
+        raise HTTPException(status_code=400, detail="Invalid OTP")
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"OTP verification error for {email}: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Error verifying OTP"
         )
 
 @router.post("/login", response_model=TokenResponse)

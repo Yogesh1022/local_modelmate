@@ -1,25 +1,33 @@
-from fastapi import Depends, HTTPException, status, Request
-from fastapi.security import OAuth2PasswordBearer
-from passlib.context import CryptContext
-from jose import JWTError, jwt
-from datetime import datetime, timedelta
-from backend.services.database import get_collection
-from bson import ObjectId
+import asyncio
 import logging
+from datetime import datetime, timedelta
+from typing import Optional
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler("logs/auth_service.log")
-    ]
-)
+from fastapi import HTTPException, status, Depends, Request
+from jose import JWTError, jwt
+from passlib.context import CryptContext
+from bson import ObjectId
+from fastapi.security import OAuth2PasswordBearer
+
+from backend.services.database import get_db, get_collection
+from backend.config import settings
+
 logger = logging.getLogger(__name__)
 
+async def verify_user_otp(email: str, otp: str) -> bool:
+    """
+    Verify the OTP for the given email.
+    Returns True if OTP is valid, False otherwise.
+    """
+    db = await get_db()
+    record = await db[settings.OTP_COLLECTION].find_one({"email": email.lower().strip(), "otp": otp})
+    if record:
+        # Optionally, delete the OTP record after successful verification
+        await db[settings.OTP_COLLECTION].delete_one({"_id": record["_id"]})
+        return True
+    return False
+
 # JWT config from environment
-from backend.config import settings
 SECRET_KEY = settings.JWT_SECRET
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_SECONDS = settings.JWT_EXPIRY

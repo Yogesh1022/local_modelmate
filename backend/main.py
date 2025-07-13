@@ -9,7 +9,12 @@ import os
 from typing import Dict, Any, List
 from contextlib import asynccontextmanager
 from dotenv import load_dotenv
+from backend.api import auth, diagram, history, chatbot, research
 from backend.api import diagram
+
+from backend.services.auth_service import create_user, verify_user_otp, create_access_token
+from backend.services.database import get_db
+from backend.config import settings
 
 # Load environment variables
 load_dotenv()
@@ -63,7 +68,7 @@ app = FastAPI(
 # CORS Middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=os.getenv("ALLOWED_ORIGINS", "*").split(","),
+    allow_origins=os.getenv("ALLOWED_ORIGINS", "http://localhost:8000").split(","),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -94,9 +99,34 @@ async def general_exception_handler(request, exc):
         content={"message": "Internal server error"}
     )
 
+# Auth Endpoints (Fallback if auth router is not implemented)
+@app.post("/auth/signup")
+async def signup(name: str, email: str, password: str):
+    logger.info(f"Signup attempt for email: {email}")
+    user, otp = await create_user(name, email, password)
+    if not user:
+        raise HTTPException(status_code=400, detail="Email already exists")
+    # Simulate OTP sending (replace with email service like SendGrid)
+    logger.info(f"OTP for {email}: {otp}")
+    return {"success": True, "message": "OTP sent to your email."}
+
+@app.post("/auth/verify-otp")
+async def verify_otp(email: str, otp: str):
+    logger.info(f"OTP verification attempt for email: {email}")
+    if await verify_user_otp(email, otp):
+        db = await get_db()
+        user = await db[settings.USERS_COLLECTION].find_one({"email": email.lower().strip()})
+        if user:
+            user["_id"] = str(user["_id"])
+            token = create_access_token(user["_id"])
+            return {"success": True, "message": "Signup successful.", "token": token}
+        raise HTTPException(status_code=400, detail="User not found")
+    raise HTTPException(status_code=400, detail="Invalid OTP")
+
 # API Routers
 try:
-    app.include_router(auth.router, prefix="/auth", tags=["Auth"])
+    from backend.api import auth as auth_router
+    app.include_router(auth_router.router, prefix="/auth", tags=["Auth"])
     app.include_router(diagram.router, tags=["Diagram"])
     app.include_router(history.router, prefix="/history", tags=["History"])
     app.include_router(chatbot.router, prefix="/chatbot", tags=["Chatbot"])

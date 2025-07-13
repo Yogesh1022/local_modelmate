@@ -1,0 +1,9 @@
+/* Import TailwindCSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional custom styles */
+#root {
+  text-align: center;
+}
