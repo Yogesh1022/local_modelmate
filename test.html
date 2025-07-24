@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .typing-indicator span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin: 0 2px;
+      background-color: #555;
+      border-radius: 50%;
+      animation: blink 1.4s infinite both;
+    }
+
+    .typing-indicator span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .typing-indicator span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes blink {
+      0%, 80%, 100% {
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen p-8 font-sans">
+
+  <!-- Header -->
+  <header class="mb-10">
+    <h1 class="text-4xl font-bold text-gray-800">Welcome back, User!</h1>
+    <p class="text-gray-500 mt-2">Ready to bring your software ideas to life? Let's get started.</p>
+  </header>
+
+  <!-- Feature Cards -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+      <div class="w-12 h-12 text-blue-600 mb-4 text-3xl">🖊️</div>
+      <h3 class="text-xl font-semibold text-gray-800">New Diagram</h3>
+      <p class="text-gray-500 mt-1">Convert your ideas into UML diagrams.</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+      <div class="w-12 h-12 text-blue-600 mb-4 text-3xl">🔍</div>
+      <h3 class="text-xl font-semibold text-gray-800">Research Agent</h3>
+      <p class="text-gray-500 mt-1">Find academic papers and resources.</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+      <div class="w-12 h-12 text-blue-600 mb-4 text-3xl">🧠</div>
+      <h3 class="text-xl font-semibold text-gray-800">Analyze Code</h3>
+      <p class="text-gray-500 mt-1">Get insights and generate models from code.</p>
+    </div>
+  </section>
+
+  <!-- Recent Activity -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">🕒 <span class="ml-2">Recent Activity</span></h2>
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <ul class="space-y-4">
+        <li class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+          <p class="text-gray-700 truncate">Build a SaaS tool for budget tracking</p>
+          <span class="text-xs text-gray-400">Jul 15, 2025</span>
+        </li>
+        <li class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+          <p class="text-gray-700 truncate">Redesign e-commerce checkout flow</p>
+          <span class="text-xs text-gray-400">Jul 14, 2025</span>
+        </li>
+        <li class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+          <p class="text-gray-700 truncate">Create a chatbot for internal support</p>
+          <span class="text-xs text-gray-400">Jul 12, 2025</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Project Planning Chatbot -->
+  <section>
+    <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">🤖 <span class="ml-2">Project Planning Assistant</span></h2>
+    <div class="bg-white rounded-2xl shadow-md flex flex-col">
+      <!-- Chat Window -->
+      <div class="p-6 h-96 overflow-y-auto flex flex-col space-y-4">
+        <!-- Bot Welcome -->
+        <div class="flex items-start gap-3">
+          <div class="bg-blue-600 p-2 rounded-full text-white">🤖</div>
+          <div class="bg-gray-100 p-4 rounded-lg rounded-tl-none">
+            <p class="text-gray-800">
+              Hello! Describe your project, and I'll help you create a comprehensive plan. For example, "a mobile app for a local library".
+            </p>
+          </div>
+        </div>
+
+        <!-- User Message -->
+        <div class="flex items-end justify-end gap-3">
+          <div class="p-4 bg-blue-500 text-white rounded-lg max-w-xl rounded-br-none">
+            I want to build a fitness tracking app with wearable integration.
+          </div>
+        </div>
+
+        <!-- Bot Typing -->
+        <div class="flex items-start gap-3">
+          <div class="bg-blue-600 p-2 rounded-full text-white">🤖</div>
+          <div class="bg-gray-100 p-4 rounded-lg rounded-tl-none">
+            <div class="typing-indicator">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <form class="p-4 border-t flex items-center gap-4">
+        <input
+          type="text"
+          placeholder="Tell me about your project..."
+          class="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          type="submit"
+          class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          🚀
+        </button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>

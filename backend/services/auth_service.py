@@ -1,4 +1,5 @@
 import asyncio
+import random
 import logging
 from datetime import datetime, timedelta
 from typing import Optional
@@ -37,6 +38,13 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # Cache MongoDB collection
 _users_collection = None
+
+from pydantic import BaseModel
+
+class LoginRequest(BaseModel):
+    email: str
+    password: str
+
 
 async def get_users_collection():
     """
@@ -83,7 +91,7 @@ async def create_user(name: str, email: str, password: str):
         existing = await collection.find_one({"email": email.lower().strip()})
         if existing:
             logger.warning(f"User with email {email} already exists")
-            return None
+            return None, None
 
         user = {
             "name": name.strip(),
@@ -91,11 +99,20 @@ async def create_user(name: str, email: str, password: str):
             "hashed_password": get_password_hash(password),
             "created_at": datetime.utcnow()
         }
-        logger.info(f"Attempting to insert user: {user}")
+        
         result = await collection.insert_one(user)
         user["_id"] = str(result.inserted_id)
-        logger.info(f"User {email} created successfully with ID: {user['_id']}")
-        return user
+        otp = f"{random.randint(100000, 999999)}"
+        db = await get_db()
+        await db[settings.OTP_COLLECTION].insert_one({
+            "email": email.lower().strip(),
+            "otp": otp,
+            "created_at": datetime.utcnow()
+        })
+
+        logger.info(f"User {email} created with OTP {otp}")
+        return user, otp
+
     except Exception as e:
         logger.error(f"Error creating user {email}: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail="Error creating user")

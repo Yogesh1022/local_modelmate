@@ -10,11 +10,15 @@ export const AppContextProvider = ({ children }) => {
   const [diagramType, setDiagramType] = useState("class");
   const [plantUML, setPlantUML] = useState("");
 
+  // Derive isLoggedIn from user state
+  const isLoggedIn = user !== null;
+
   return (
     <AppContext.Provider
       value={{
         user,
         setUser,
+        isLoggedIn,
         prompt,
         setPrompt,
         diagramType,
